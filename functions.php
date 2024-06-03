@@ -48,11 +48,9 @@ if (isset($_POST['batata'])) {
     $inputedText = $_POST['text'];
 
     if($_SESSION['text'] == $inputedText){
-        // echo "ahhh caralho";
         play();
         $image_src = "tup.png";
     }else{
-        // echo "ERRADOOOO";
         $image_src = "tdown.png";
         echo $_SESSION['audio_player'];
     }
