@@ -7,10 +7,7 @@ if (!isset($_SESSION['text'])) {
 }
 $text = $_SESSION['text'];
 $audio_player = "";
-
-function getBackgroundClass() {
-    return 'bg-warning';
-}
+$image_src = "hand.png";  
 
 function play(){
     global $text, $audio_player;
@@ -51,14 +48,14 @@ if (isset($_POST['batata'])) {
     $inputedText = $_POST['text'];
 
     if($_SESSION['text'] == $inputedText){
-        echo "ahhh caralho";
-        getBackgroundClass();
+        // echo "ahhh caralho";
         play();
+        $image_src = "tup.png";
     }else{
-        echo "ERRADOOOO";
+        // echo "ERRADOOOO";
+        $image_src = "tdown.png";
         echo $_SESSION['audio_player'];
     }
-
 }
 
 if (isset($_POST['playStart'])) { 
