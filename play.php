@@ -18,23 +18,23 @@
         }
 
         .btn-custom {
-            width: 200px;  /* Adjust width as needed */
-            height: 200px; /* Adjust height as needed */
-            border-radius: 50%; /* Makes the button round */
-            font-size: 24px; /* Adjust font size as needed */
+            width: 25vw; /* 200px = 25% of viewport width */
+            height: 25vw; /* 200px = 25% of viewport width */
+            border-radius: 50%;
+            font-size: 3vw; /* 24px = 3% of viewport width */
         }
     </style>
 </head>
 <body>
     <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">ListenUp</a>
+            <a class="navbar-brand" href="play.php">ListenUp</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="about.php">About</a>
             </div>
             </div>
         </div>
@@ -42,9 +42,9 @@
     <div class="container vh-100 d-flex justify-content-center align-items-center">
             <form method="post" action="main.php">
                 <button button class="btn btn-outline-secondary btn-custom shadow border border-0" type="submit" name="playStart">START</button>
-            </form>   
-  
+            </form> 
    </div>
+
 </body>
 </html>
 

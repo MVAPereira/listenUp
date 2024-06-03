@@ -11,6 +11,11 @@ $image_src = "hand.png";
 
 function play(){
     global $text, $audio_player;
+    
+    $language = 'en-US';
+
+    $language = rawurldecode($language);
+
     $min_random_number = 0;
     $max_random_number = 100;
     $text = rand($min_random_number, $max_random_number);
@@ -19,7 +24,7 @@ function play(){
     $text = rawurlencode($text);
 
     
-    $convert = file_get_contents('https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=' . $text . '&tl=en-US');
+    $convert = file_get_contents('https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=' . $text . '&tl='. $language .'');
 
     if ($convert !== false) {
         $audio_base64 = base64_encode($convert);
