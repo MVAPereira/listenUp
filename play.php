@@ -41,10 +41,35 @@
     </nav>
     <div class="container vh-100 d-flex justify-content-center align-items-center">
             <form method="post" action="main.php">
-                <button button class="btn btn-outline-secondary btn-custom shadow border border-0" type="submit" name="playStart">START</button>
-            </form> 
-   </div>
+                <button button class="btn btn-outline-secondary btn-custom shadow border border-0" type="submit" name="playStart" >START</button>
 
+                <div class="p-5 d-flex justify-content-center align-items-center">
+                    <div class="form-check d-flex align-items-center m-2">
+                        <input class="form-check-input" type="radio" name="language" id="exampleRadios1" value="en-US"checked>
+                        <label class="form-check-label ms-1" for="exampleRadios1">
+                            <img src="english.png" alt="english" style="width: 100%; height: auto;">
+                        </label>
+                    </div>
+                    <div class="form-check d-flex align-items-center m-2 ms-5">
+                        <input class="form-check-input" type="radio" name="language" id="exampleRadios2" value="de-DE">
+                        <label class="form-check-label ms-1" for="exampleRadios2">
+                            <img src="germany.png" alt="german" style="width: 100%; height: auto;">
+                        </label>
+                    </div>
+
+                    <div class="form-check d-flex align-items-center m-2 ms-5">
+                        <input class="form-check-input" type="radio" name="language" id="exampleRadios2" value="fr-FR">
+                        <label class="form-check-label ms-1" for="exampleRadios2">
+                            <img src="france.png" alt="french" style="width: 100%; height: auto;">
+                        </label>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
+                Tooltip on top
+                </button>
+            </form>
+   </div>
 </body>
 </html>
 

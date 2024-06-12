@@ -9,11 +9,10 @@ $text = $_SESSION['text'];
 $audio_player = "";
 $image_src = "hand.png";  
 
-function play(){
+function play($language = 'en-US'){
+
     global $text, $audio_player;
     
-    $language = 'en-US';
-
     $language = rawurldecode($language);
 
     $min_random_number = 0;
@@ -45,7 +44,7 @@ function play(){
 
 
 if (isset($_POST['convert'])) {
-    play(); 
+    play($_SESSION['language']); 
 }
 
 if (isset($_POST['batata'])) {
@@ -53,7 +52,7 @@ if (isset($_POST['batata'])) {
     $inputedText = $_POST['text'];
 
     if($_SESSION['text'] == $inputedText){
-        play();
+        play($_SESSION['language']);
         $image_src = "tup.png";
     }else{
         $image_src = "tdown.png";
@@ -61,8 +60,10 @@ if (isset($_POST['batata'])) {
     }
 }
 
-if (isset($_POST['playStart'])) { 
-    play();
+if (isset($_POST['playStart'])) {
+    $_SESSION['language'] = $_POST['language'];
+
+    play($_SESSION['language']); 
 }
 
 if (isset($audio_player)) {
