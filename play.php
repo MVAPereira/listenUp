@@ -68,41 +68,15 @@
                         </label>
                     </div>
                 </div>
-                <!-- <input type="checkbox" class="btn-check" name="mode" id="btn-check-4" autocomplete="off">
-                <label class="btn btn-primary" for="btn-check" data-bs-toggle="tooltip" title="Hooray!">Single toggle</label> -->
-              
-                
-
-                
-
-                
-
-                <!-- <div class="container text-center">
-                    <div class="row">
-                        <div class="col btn-dark m-1">
-                            <input type="radio" class="btn-check" name="mode" value="fr-FR" id="option5" autocomplete="off" checked>
-                            <label class="btn btn-secondary" for="option5">standart</label>
-                        </div>
-                        <div class="col btn-dark m-1">
-                            <input type="radio" class="btn-check" name="mode" value="batata" id="option6" autocomplete="off">
-                            <label class="btn btn-secondary" for="option6">years</label>
-                        </div>
-                        <div class="col btn-dark m-1">
-                            <input type="radio" class="btn-check" name="mode" value="batata" id="option7" autocomplete="off">
-                            <label class="btn btn-secondary" for="option7">changes</label>
-                        </div>
-                    </div>
-                </div> -->
-
                 <div class="d-grid gap-2">
                     <input type="radio" class="btn-check" name="mode" value="standard" id="option5" autocomplete="off" checked>
-                    <label class="btn btn-secondary" for="option5" data-bs-toggle="tooltip" title="Hooray!">standard</label>
+                    <label class="btn btn-secondary" for="option5" data-bs-toggle="tooltip" title="numbers from 0 to 100">standard</label>
 
                     <input type="radio" class="btn-check" name="mode" value="years" id="option7" autocomplete="off">
-                    <label class="btn btn-secondary" for="option7">years</label>
+                    <label class="btn btn-secondary" for="option7" data-bs-toggle="tooltip" title="numbers from 1500 to 2050">years</label>
 
                     <input type="radio" class="btn-check" name="mode" value="cash" id="option6" autocomplete="off">
-                    <label class="btn btn-secondary" for="option6">cash</label>
+                    <label class="btn btn-secondary" for="option6" data-bs-toggle="tooltip" title="decimal numbers cash like" >cash</label>
                 </div>
 
             </form>
