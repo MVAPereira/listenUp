@@ -23,6 +23,10 @@
             border-radius: 50%;
             font-size: 3vw; /* 24px = 3% of viewport width */
         }
+
+        .btn-dark {
+            background: red;
+        }
     </style>
 </head>
 <body>
@@ -64,12 +68,52 @@
                         </label>
                     </div>
                 </div>
+                <!-- <input type="checkbox" class="btn-check" name="mode" id="btn-check-4" autocomplete="off">
+                <label class="btn btn-primary" for="btn-check" data-bs-toggle="tooltip" title="Hooray!">Single toggle</label> -->
+              
+                
 
-                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
-                Tooltip on top
-                </button>
+                
+
+                
+
+                <!-- <div class="container text-center">
+                    <div class="row">
+                        <div class="col btn-dark m-1">
+                            <input type="radio" class="btn-check" name="mode" value="fr-FR" id="option5" autocomplete="off" checked>
+                            <label class="btn btn-secondary" for="option5">standart</label>
+                        </div>
+                        <div class="col btn-dark m-1">
+                            <input type="radio" class="btn-check" name="mode" value="batata" id="option6" autocomplete="off">
+                            <label class="btn btn-secondary" for="option6">years</label>
+                        </div>
+                        <div class="col btn-dark m-1">
+                            <input type="radio" class="btn-check" name="mode" value="batata" id="option7" autocomplete="off">
+                            <label class="btn btn-secondary" for="option7">changes</label>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="d-grid gap-2">
+                    <input type="radio" class="btn-check" name="mode" value="standard" id="option5" autocomplete="off" checked>
+                    <label class="btn btn-secondary" for="option5" data-bs-toggle="tooltip" title="Hooray!">standard</label>
+
+                    <input type="radio" class="btn-check" name="mode" value="years" id="option7" autocomplete="off">
+                    <label class="btn btn-secondary" for="option7">years</label>
+
+                    <input type="radio" class="btn-check" name="mode" value="cash" id="option6" autocomplete="off">
+                    <label class="btn btn-secondary" for="option6">cash</label>
+                </div>
+
             </form>
    </div>
+   <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>     
+   
 </body>
 </html>
 

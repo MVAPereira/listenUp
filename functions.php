@@ -9,16 +9,14 @@ $text = $_SESSION['text'];
 $audio_player = "";
 $image_src = "hand.png";  
 
-function play($language = 'en-US'){
+function play($language = 'en-US', $min_random_number = 0, $max_random_number = 100){
 
     global $text, $audio_player;
     
     $language = rawurldecode($language);
-
-    $min_random_number = 0;
-    $max_random_number = 100;
+ 
     $text = rand($min_random_number, $max_random_number);
-
+    
     $text = htmlspecialchars($text);
     $text = rawurlencode($text);
 
@@ -44,7 +42,7 @@ function play($language = 'en-US'){
 
 
 if (isset($_POST['convert'])) {
-    play($_SESSION['language']); 
+    play($_SESSION['language'], $_SESSION['min_random_number'], $_SESSION['max_random_number']); 
 }
 
 if (isset($_POST['batata'])) {
@@ -52,7 +50,7 @@ if (isset($_POST['batata'])) {
     $inputedText = $_POST['text'];
 
     if($_SESSION['text'] == $inputedText){
-        play($_SESSION['language']);
+        play($_SESSION['language'], $_SESSION['min_random_number'], $_SESSION['max_random_number']);
         $image_src = "tup.png";
     }else{
         $image_src = "tdown.png";
@@ -61,9 +59,21 @@ if (isset($_POST['batata'])) {
 }
 
 if (isset($_POST['playStart'])) {
+    
     $_SESSION['language'] = $_POST['language'];
 
-    play($_SESSION['language']); 
+    if ($_POST['mode'] == "years"){
+        $_SESSION['min_random_number'] = 1500;
+        $_SESSION['max_random_number'] = 2050;
+    } 
+    
+    else {
+
+        $_SESSION['min_random_number'] = 0;
+        $_SESSION['max_random_number'] = 100;
+    }
+
+    play($_SESSION['language'], $_SESSION['min_random_number'], $_SESSION['max_random_number']); 
 }
 
 if (isset($audio_player)) {
